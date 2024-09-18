@@ -1,6 +1,11 @@
+import Aman from "./aman.jsx"
 function App() {
   return (
-    <h1>Hello 👋 Aman Kumar, welcome to your first Vite React Project.</h1>
+    <>
+      <Aman/>
+      {/* <h1>Hello 👋 Aman Kumar, welcome to your first Vite React Project.</h1> */}
+      <h3>Chai or Code</h3>
+    </>
   )
 }
 
