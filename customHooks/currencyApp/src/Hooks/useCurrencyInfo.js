@@ -10,8 +10,8 @@ function useCurrencyInfo(currency){     // arguement is optional..depends on the
     const [data, setData] = useState({});   // if fetching failed then it will show an empty object..
     useEffect(() => {
         fetch(`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${currency}.json`)
-        .then((response) => response.json)
-        .then((response) => setData(response[currency]))  // currency data will save in setData fetched form response
+        .then((response) => response.json())
+        .then((response) => setData(response[currency] || {}))  // currency data will save in setData fetched form response
         // and currency inside the response is variable..
     }, [currency]);     // here we have entered the currency because our data is depends on this currency only..
     return data;
