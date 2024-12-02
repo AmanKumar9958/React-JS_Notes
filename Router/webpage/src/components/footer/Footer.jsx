@@ -36,12 +36,12 @@ function Footer() {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">Follow us</h2>
                             <ul className="text-gray-500 font-medium">
                                 <li className="mb-4">
-                                    <a href="https://github.com/hiteshchoudhary" className={(isActive) => `hover:underline ${isActive ? "text-green-500" : "text-gray-700"}`} target="_blank" rel="noreferrer">
-                                        Github
-                                    </a>
+                                    <Link to="github" className={({isActive}) => `hover:underline hover:text-orange-700 ${isActive ? "text-green-500" : "text-gray-700"}`}>
+                                        GitHub
+                                    </Link>
                                 </li>
                                 <li>
-                                    <Link to="/" className={(isActive) => `hover:underline ${isActive ? "text-green-500" : "text-gray-700"}`}>
+                                    <Link to="/" className={({isActive}) => `hover:underline ${isActive ? "text-green-500" : "text-gray-700"}`}>
                                         Discord
                                     </Link>
                                 </li>
