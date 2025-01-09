@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { ToDoProvider } from './context';
 import './App.css';
+import TodoForm from './component/ToDoForm';
+import TodoItem from './component/ToDoItem';
 
 function App() {
   const [todo, setTodo] = useState([]); // State to store the todos
@@ -50,6 +52,12 @@ function App() {
       setTodo(storedToDos); // Set the todos to the state if there are any todos in the local storage
     }
   })
+
+  useEffect(() => {
+    localStorage.setItem("toDos", JSON.stringify(todo))
+  }, [])
+
+
   return (
     <ToDoProvider value={{ todo, addToDo, editToDo, deleteToDo, toggleComplete }}>
       <div className="bg-[#172842] min-h-screen py-8">
@@ -57,9 +65,15 @@ function App() {
           <h1 className="text-2xl font-bold text-center mb-8 mt-2">Manage Your Todos</h1>
           <div className="mb-4">
             {/* To do form */}
+            <TodoForm />
           </div>
           <div className="flex flex-wrap gap-y-3">
             {/* Loop and Add TodoItem here */}
+            {todo.map((todo) => (
+              <div key={todo.id} className='w-full'>
+                <TodoItem todo={todo} key={todo.id}/>
+              </div>
+            ))}
           </div>
         </div>
       </div>
