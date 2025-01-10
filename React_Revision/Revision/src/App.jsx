@@ -1,18 +1,17 @@
 import React, { useState } from 'react'
 import './App.css'
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import Card from './components/Card';
+import UserName from './components/UserName';
 
 function App() {
-  let [user, setUser] = useState("Aman Kumar");
-  const changeUser = () => {
-    let newUser = prompt("Enter new user name: ");
-    setUser(newUser);
-  }
   return (
     <>
-      <div className='bg-slate-700 w-fit m-auto p-4 rounded-lg text-white'>
-        <h2 className='font-bold'>User: {user}</h2>
-        <button onClick={changeUser} className='bg-gray-600 rounded-md p-2 text-white font-bold mt-4'>Change User</button>
-      </div>
+      <Nav />
+      {/* <Card /> */}
+      <UserName username="Aman" city="New Delhi" course="BCA" />
+      <Footer />
     </>
   )
 }

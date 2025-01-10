@@ -1,0 +1,14 @@
+.links{
+    transition: all 200ms;
+}
+.links:hover{
+    color: red;
+    scale: 1.1;
+}
+.logo{
+    transition: all 200ms;
+}
+.logo:hover {
+    filter: drop-shadow(0 0 2em #646cffaa);
+    scale: 1.1;
+}
