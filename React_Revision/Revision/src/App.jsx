@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Card from './components/Card';
 import UserName from './components/UserName';
 import UserProfile from './components/UserProfile';
+import PicAPI from './components/PicAPI';
 
 function App() {
   const users = [
@@ -49,10 +50,14 @@ function App() {
     <>
       <Nav />
       {/* <Card /> */}
+
       {/* <UserName username="Aman" city="New Delhi" course="BCA" /> */}
-      {users.map((element) => {
+
+      {/* {users.map((element) => {
         return <UserProfile name={element.name} age={element.age} state={element.state} photo={element.profilePhoto} profession={element.profession} />
-      })}
+      })} */}
+
+      <PicAPI />
       <Footer />
     </>
   )
