@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './App.css'
 import Nav from './components/Nav';
 import Footer from './components/Footer';
@@ -72,8 +72,6 @@ function App() {
         <Route path='/contact' element={<Contact />}/>
         <Route path='/projects' element={<Projects />}/>
       </Routes>
-
-
 
       <Footer />
     </>
