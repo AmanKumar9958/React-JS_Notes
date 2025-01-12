@@ -3,7 +3,7 @@ import './App.css'
 const App = () => {
   return (
     <>
-      <h2>React Redux Toolkit</h2>
+      <h1>React Redux Toolkit</h1>
     </>
   )
 }
