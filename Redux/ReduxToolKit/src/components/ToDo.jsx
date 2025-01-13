@@ -3,8 +3,10 @@ import { useSelector, useDispatch } from 'react-redux'
 import { removeToDo } from '../features/ToDo/toDoSlice'
 
 const ToDo = () => {
-    const todos = useSelector(state => state.todos) // this come form our initial state from our store..
+    const todos = useSelector(state => state.todo.todos) // updated to access the correct state
     const dispatch = useDispatch();
+
+    console.log("Todos: ", todos);
 
     return (
         <>
@@ -39,7 +41,7 @@ const ToDo = () => {
             ))}
             </ul>
         </>
-        )
+    )
 }
 
 export default ToDo
