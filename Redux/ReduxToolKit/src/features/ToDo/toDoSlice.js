@@ -16,7 +16,7 @@ export const toDoSLice = createSlice({
             state.todos.push(toDo);     // adding the to in the state for updating the UI..
         },     
         removeToDo: (state, action) => {
-            state.todos = state.todos.filter((eachToDo) => {eachToDo.id !== action.payload})    // it will filter and gives the matched toDos only..
+            state.todos = state.todos.filter((eachToDo) => eachToDo.id !== action.payload)    // it will filter and gives the matched toDos only..
         },
         updateToDo: (state, action) => {
             const id = action.payload;
