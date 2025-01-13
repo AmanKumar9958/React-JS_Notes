@@ -1,9 +1,13 @@
 import React from 'react'
 import './App.css'
+import AddToDo from './components/AddToDo'
+import ToDo from './components/ToDo'
 const App = () => {
   return (
     <>
-      <h1>React Redux Toolkit</h1>
+      <h1>Add To-Do</h1>
+      <AddToDo />
+      <ToDo />
     </>
   )
 }
