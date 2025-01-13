@@ -1,7 +1,7 @@
 import { createSlice, nanoid } from '@reduxjs/toolkit'  // nanoid is used for generating the unique ids..
 
 const initialState = {
-    todos: [{id: 1, text: "Running"}]
+    todos: []
 }
 
 export const toDoSLice = createSlice({
@@ -19,8 +19,7 @@ export const toDoSLice = createSlice({
             state.todos = state.todos.filter((eachToDo) => eachToDo.id !== action.payload)    // it will filter and gives the matched toDos only..
         },
         updateToDo: (state, action) => {
-            const id = action.payload;
-            const text = action.payload;
+            const {id, text} = action.payload
             const toDo = state.todos.find((eachToDo) => eachToDo.id === id);    // finding the todo to update..
             if(toDo){
                 toDo.text = text;   // updating the text of founded toDo..
