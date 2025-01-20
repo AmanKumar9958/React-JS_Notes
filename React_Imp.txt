@@ -1,13 +1,13 @@
 React JS:
-	Component
+	Component ✔
 	Data Usage
-	Props
-	State -> useState
-	Effect -> useEffect
+	Props ✔
+	State -> useState ✔
+	Effect -> useEffect ✔
 JS:
-	Arrays
-	Map
-	Filter
-	Reduce
-	Objects
+	Arrays ✔
+	Map ✔
+	Filter ✔
+	Reduce ✔
+	Objects ✔
 	
